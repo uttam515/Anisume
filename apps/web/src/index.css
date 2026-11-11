@@ -10,7 +10,7 @@
   }
 
   ::selection {
-    background-color: rgba(99, 102, 241, 0.35);
+    background-color: rgba(16, 185, 129, 0.35);
     color: #ffffff;
   }
 }
@@ -31,7 +31,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6366f1;
+  background: #10B981;
 }
 
 /* Hide scrollbar utility */
@@ -47,8 +47,8 @@
 .hanko-badge {
   display: inline-flex;
   align-items: center;
-  border: 1.5px solid #6366f1;
-  color: #a5b4fc;
+  border: 1.5px solid #10B981;
+  color: #6ee7b7;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;

@@ -47,7 +47,7 @@ function NotFoundPage() {
         <div className="w-16 h-16 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mx-auto mb-6">
           <AlertCircle className="w-8 h-8" />
         </div>
-        <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-indigo-400 mb-2">
+        <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-400 mb-2">
           404
         </div>
         <h1 className="text-2xl font-bold text-slate-100 mb-3">Lost in the Anime Void?</h1>

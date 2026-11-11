@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="text-xs font-black uppercase tracking-wider text-white flex items-center space-x-1.5">
               <span>Navigation</span>
-              <span className="font-japanese text-[10px] text-indigo-400">案内</span>
+              <span className="font-japanese text-[10px] text-emerald-400">案内</span>
             </h4>
             <ul className="space-y-2 text-xs font-medium">
               <li>

@@ -59,7 +59,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `flex items-center space-x-2 px-3.5 py-2 rounded-xl text-xs font-black transition-all duration-200 ${
                       isActive
-                        ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                        ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/30'
                         : 'text-slate-300 hover:text-white hover:bg-dark-850'
                     }`
                   }
@@ -81,7 +81,7 @@ export default function Navbar() {
                 placeholder="Search anime, genres..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-dark-900 border border-dark-800 rounded-xl pl-9 pr-3.5 py-2 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                className="w-full bg-dark-900 border border-dark-800 rounded-xl pl-9 pr-3.5 py-2 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
               />
             </form>
 
@@ -95,7 +95,7 @@ export default function Navbar() {
                     to="/profile"
                     className="flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-dark-900 hover:bg-dark-850 border border-dark-800 text-xs font-bold text-slate-200 transition"
                   >
-                    <div className="w-6 h-6 rounded-lg overflow-hidden bg-indigo-600 flex items-center justify-center text-white text-[11px] font-black">
+                    <div className="w-6 h-6 rounded-lg overflow-hidden bg-emerald-600 flex items-center justify-center text-white text-[11px] font-black">
                       {user.avatar ? (
                         <img src={user.avatar} alt={user.username} className="w-full h-full object-cover" />
                       ) : (
@@ -124,7 +124,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     to="/register"
-                    className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-500 border border-indigo-500 shadow-md shadow-indigo-600/25 hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center space-x-1.5"
+                    className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 border border-emerald-500 shadow-md shadow-emerald-600/25 hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center space-x-1.5"
                   >
                     <UserPlus className="w-3.5 h-3.5" />
                     <span>Sign Up</span>
@@ -155,7 +155,7 @@ export default function Navbar() {
               placeholder="Search anime, genres..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-dark-900 border border-dark-800 rounded-xl pl-9 pr-3.5 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-indigo-500"
+              className="w-full bg-dark-900 border border-dark-800 rounded-xl pl-9 pr-3.5 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-emerald-500"
             />
           </form>
 
@@ -171,7 +171,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-bold ${
                       isActive
-                        ? 'bg-indigo-600 text-white'
+                        ? 'bg-emerald-600 text-white'
                         : 'text-slate-300 hover:text-white hover:bg-dark-850'
                     }`
                   }
@@ -194,7 +194,7 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center space-x-2 text-sm font-bold text-slate-200"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-xs font-black">
+                  <div className="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center text-white text-xs font-black">
                     {user.username.charAt(0).toUpperCase()}
                   </div>
                   <span>{user.username}</span>
@@ -223,7 +223,7 @@ export default function Navbar() {
                 <Link
                   to="/register"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-center space-x-1.5 px-4 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/25"
+                  className="flex items-center justify-center space-x-1.5 px-4 py-2.5 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/25"
                 >
                   <UserPlus className="w-3.5 h-3.5" />
                   <span>Sign Up</span>

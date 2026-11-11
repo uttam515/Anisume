@@ -50,7 +50,7 @@ export default function LoginPage() {
       </div>
 
       {/* Ambient Lighting Orbs */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Unified Full-Size Cinematic Auth Card */}
@@ -68,13 +68,13 @@ export default function LoginPage() {
 
           {/* Top Artwork Badge */}
           <div className="absolute top-4 left-4 z-20 flex items-center space-x-2 px-3 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/10 text-white text-[11px] font-black uppercase tracking-wider shadow-lg">
-            <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>One Piece • Egghead Arc</span>
           </div>
 
           {/* Bottom Japanese Quote & Callout */}
           <div className="absolute bottom-6 left-6 right-6 z-20 text-left">
-            <span className="text-[10px] font-japanese font-black px-2 py-0.5 rounded bg-indigo-600 text-white uppercase tracking-wider inline-block mb-2 shadow-sm">
+            <span className="text-[10px] font-japanese font-black px-2 py-0.5 rounded bg-emerald-600 text-white uppercase tracking-wider inline-block mb-2 shadow-sm">
               新時代へ
             </span>
             <h3 className="text-lg sm:text-xl font-black text-white leading-snug drop-shadow-md">
@@ -117,7 +117,7 @@ export default function LoginPage() {
                   required
                   value={identifier}
                   onChange={(e) => setIdentifier(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 transition-all font-medium"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/30 transition-all font-medium"
                 />
               </div>
 
@@ -126,7 +126,7 @@ export default function LoginPage() {
                   <label className="block text-xs font-bold text-slate-300">Password</label>
                   <Link
                     to="/forgot-password"
-                    className="text-xs font-bold text-indigo-400 hover:underline transition-colors"
+                    className="text-xs font-bold text-emerald-400 hover:underline transition-colors"
                   >
                     Forgot password?
                   </Link>
@@ -136,7 +136,7 @@ export default function LoginPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 transition-all font-medium"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/30 transition-all font-medium"
                 />
               </div>
 
@@ -144,7 +144,7 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-2 inline-flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold shadow-lg shadow-indigo-600/25 transition-all duration-200 cursor-pointer disabled:opacity-50 active:scale-[0.99]"
+                className="w-full mt-2 inline-flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold shadow-lg shadow-emerald-600/25 transition-all duration-200 cursor-pointer disabled:opacity-50 active:scale-[0.99]"
               >
                 <LogIn className="w-4 h-4" />
                 <span>{loading ? 'Authenticating...' : 'Sign In'}</span>
@@ -155,7 +155,7 @@ export default function LoginPage() {
           {/* Bottom Switch Link */}
           <div className="mt-8 pt-5 border-t border-[#252E37] text-center text-xs text-slate-400">
             Don't have an account?{' '}
-            <Link to="/register" className="font-black text-indigo-400 hover:underline ml-1">
+            <Link to="/register" className="font-black text-emerald-400 hover:underline ml-1">
               Sign up for free
             </Link>
           </div>

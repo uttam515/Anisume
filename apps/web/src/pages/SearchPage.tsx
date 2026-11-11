@@ -132,7 +132,7 @@ export default function SearchPage() {
             placeholder="Search anime title, studio, or genre..."
             value={inputVal}
             onChange={(e) => handleInputChange(e.target.value)}
-            className="w-full bg-dark-900 border border-dark-800 rounded-2xl pl-12 pr-12 py-4 text-sm sm:text-base text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 shadow-2xl transition-all font-medium"
+            className="w-full bg-dark-900 border border-dark-800 rounded-2xl pl-12 pr-12 py-4 text-sm sm:text-base text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 shadow-2xl transition-all font-medium"
           />
           {inputVal && (
             <button
@@ -151,7 +151,7 @@ export default function SearchPage() {
             onClick={() => handleTypeChange('all')}
             className={`px-4 py-2 rounded-xl text-xs font-black transition-colors ${
               typeParam === 'all'
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
                 : 'bg-dark-900 text-slate-300 hover:text-white border border-dark-800'
             }`}
           >
@@ -161,7 +161,7 @@ export default function SearchPage() {
             onClick={() => handleTypeChange('tv')}
             className={`flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-black transition-colors ${
               typeParam === 'tv'
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
                 : 'bg-dark-900 text-slate-300 hover:text-white border border-dark-800'
             }`}
           >
@@ -172,7 +172,7 @@ export default function SearchPage() {
             onClick={() => handleTypeChange('movie')}
             className={`flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-black transition-colors ${
               typeParam === 'movie'
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
                 : 'bg-dark-900 text-slate-300 hover:text-white border border-dark-800'
             }`}
           >
@@ -210,7 +210,7 @@ export default function SearchPage() {
             'Popular Series & Films'
           )}
         </span>
-        <span className="font-bold text-indigo-400">{totalCount.toLocaleString()} anime found</span>
+        <span className="font-bold text-emerald-400">{totalCount.toLocaleString()} anime found</span>
       </div>
 
       {/* Results View */}

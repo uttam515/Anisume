@@ -117,7 +117,7 @@ export default function UserProfilePage() {
         <p className="text-xs text-[#A6A49F] mb-6">{error}</p>
         <Link
           to="/discover"
-          className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md shadow-indigo-600/20 transition"
+          className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition"
         >
           <span>Discover Anime</span>
         </Link>
@@ -139,11 +139,11 @@ export default function UserProfilePage() {
 
       {/* Profile Header Card */}
       <div className="bg-brand-ink border border-dark-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden mb-8">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 relative z-10">
           {/* Avatar display */}
-          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-dark-950 border-2 border-indigo-500/40 shrink-0 shadow-lg flex items-center justify-center">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-dark-950 border-2 border-emerald-500/40 shrink-0 shadow-lg flex items-center justify-center">
             {profileData.avatar ? (
               <img
                 src={profileData.avatar}
@@ -154,7 +154,7 @@ export default function UserProfilePage() {
                 }}
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-indigo-600 to-violet-600 text-white font-black text-3xl uppercase">
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-600 to-violet-600 text-white font-black text-3xl uppercase">
                 {profileData.username.charAt(0)}
               </div>
             )}
@@ -305,7 +305,7 @@ export default function UserProfilePage() {
                     onClick={() => handleToggleGenre(g.name)}
                     className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
                       isSelected
-                        ? 'bg-indigo-600 text-white border-indigo-500 shadow-sm shadow-indigo-600/20 font-bold'
+                        ? 'bg-emerald-600 text-white border-emerald-500 shadow-sm shadow-emerald-600/20 font-bold'
                         : 'bg-dark-900 border-dark-800 text-slate-400 hover:text-slate-200'
                     }`}
                   >
@@ -326,7 +326,7 @@ export default function UserProfilePage() {
             <button
               onClick={handleSave}
               disabled={saveLoading}
-              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md shadow-indigo-600/25 transition disabled:opacity-50"
+              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/25 transition disabled:opacity-50"
             >
               {saveLoading ? (
                 <div className="w-3.5 h-3.5 rounded-full border-2 border-white border-t-transparent animate-spin" />
@@ -354,7 +354,7 @@ export default function UserProfilePage() {
               <Link
                 key={genre}
                 to={`/discover?genres=${encodeURIComponent(genre)}`}
-                className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-200 hover:text-white text-xs font-bold border border-dark-750 hover:border-indigo-500/40 transition-colors"
+                className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-200 hover:text-white text-xs font-bold border border-dark-750 hover:border-emerald-500/40 transition-colors"
               >
                 <Flame className="w-3 h-3 text-brand-yellow" />
                 <span>{genre}</span>
@@ -372,7 +372,7 @@ export default function UserProfilePage() {
 
       {/* Personalized Taste & Recommendation Card */}
       {isOwnProfile && (
-        <div className="bg-gradient-to-r from-indigo-500/10 via-dark-900 to-dark-900 border border-indigo-500/20 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="bg-gradient-to-r from-emerald-500/10 via-dark-900 to-dark-900 border border-emerald-500/20 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <h3 className="text-sm font-bold text-[#F3F0E8] uppercase tracking-wider flex items-center space-x-2 font-display">
               <Flame className="w-4 h-4 text-brand-yellow" />
@@ -392,7 +392,7 @@ export default function UserProfilePage() {
             </Link>
             <Link
               to="/recommendations"
-              className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md shadow-indigo-600/20 transition"
+              className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition"
             >
               View Recommendations
             </Link>

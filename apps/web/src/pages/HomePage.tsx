@@ -36,8 +36,8 @@ const FLAGSHIP_LEGENDS = [
     type: 'TV Series',
     year: '2024',
     malId: 21,
-    accentBorder: 'border-indigo-500/50 hover:border-indigo-400',
-    badgeClass: 'bg-indigo-500/20 text-indigo-400 border-indigo-500/40',
+    accentBorder: 'border-emerald-500/50 hover:border-emerald-400',
+    badgeClass: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40',
     desc: 'Gear 5 Luffy and the Straw Hats arrive at the Island of the Future, uncovering world secrets.',
   },
   {
@@ -120,8 +120,8 @@ const FLAGSHIP_LEGENDS = [
     type: 'TV Series',
     year: '2006',
     malId: 1535,
-    accentBorder: 'border-indigo-500/50 hover:border-indigo-400',
-    badgeClass: 'bg-indigo-500/20 text-indigo-400 border-indigo-500/40',
+    accentBorder: 'border-emerald-500/50 hover:border-emerald-400',
+    badgeClass: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40',
     desc: 'The definitive intellectual showdown between a notebook-wielding genius and the master detective.',
   },
 ];
@@ -194,10 +194,10 @@ export default function HomePage() {
               to={`/search?q=${encodeURIComponent(studio.name)}`}
               className="flex items-center space-x-3 px-4 py-2 rounded-xl hover:bg-dark-850 transition-all group"
             >
-              <span className="w-2 h-2 rounded-full bg-indigo-500 group-hover:scale-125 transition-transform" />
+              <span className="w-2 h-2 rounded-full bg-emerald-500 group-hover:scale-125 transition-transform" />
               <div className="flex flex-col text-left">
                 <div className="flex items-center space-x-2">
-                  <span className="text-sm font-black text-white group-hover:text-indigo-400 transition-colors">
+                  <span className="text-sm font-black text-white group-hover:text-emerald-400 transition-colors">
                     {studio.name}
                   </span>
                   <span className="font-japanese text-[10px] text-slate-500 group-hover:text-slate-300">
@@ -215,12 +215,12 @@ export default function HomePage() {
 
       {/* 3. Personalized Recommendations (Logged In) */}
       {user && recommendations.length > 0 && (
-        <section className="bg-gradient-to-r from-indigo-500/10 via-[#14191D] to-[#14191D] border border-indigo-500/20 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+        <section className="bg-gradient-to-r from-emerald-500/10 via-[#14191D] to-[#14191D] border border-emerald-500/20 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
           <SectionHeader
             title="Personalized Recommendations"
             subtitle="Real-time taste matches. React with Heart, Dislike, or Watched to evolve your signals."
             kanji="あなたへ"
-            accentColor="red"
+            accentColor="emerald"
             icon={Flame}
             viewAllLink="/recommendations"
           />
@@ -286,7 +286,7 @@ export default function HomePage() {
                 {/* Top Overlay Badges */}
                 <div className="absolute top-2 inset-x-2 flex items-center justify-between pointer-events-none">
                   {/* Japanese Kanji Seal */}
-                  <span className="w-6 h-6 rounded-md bg-black/80 backdrop-blur-md text-[11px] font-black text-indigo-400 flex items-center justify-center font-japanese border border-indigo-500/30 shadow-md">
+                  <span className="w-6 h-6 rounded-md bg-black/80 backdrop-blur-md text-[11px] font-black text-emerald-400 flex items-center justify-center font-japanese border border-emerald-500/30 shadow-md">
                     {anime.kanji}
                   </span>
 
@@ -308,7 +308,7 @@ export default function HomePage() {
               {/* Card Meta Body */}
               <div className="p-3.5 space-y-1.5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-xs sm:text-sm font-black text-[#FAF3E0] group-hover:text-indigo-400 transition-colors line-clamp-1 leading-snug">
+                  <h4 className="text-xs sm:text-sm font-black text-[#FAF3E0] group-hover:text-emerald-400 transition-colors line-clamp-1 leading-snug">
                     {anime.title}
                   </h4>
                   <p className="text-[11px] text-slate-400 font-medium line-clamp-1">
@@ -340,7 +340,7 @@ export default function HomePage() {
             </div>
             <Link
               to="/discover"
-              className="px-5 py-2.5 rounded-xl font-black text-xs bg-indigo-600 text-white hover:bg-indigo-500 shadow-md shadow-indigo-600/20 transition shrink-0"
+              className="px-5 py-2.5 rounded-xl font-black text-xs bg-emerald-600 text-white hover:bg-emerald-500 shadow-md shadow-emerald-600/20 transition shrink-0"
             >
               Open Complete Filter Matrix →
             </Link>
@@ -351,12 +351,12 @@ export default function HomePage() {
               <Link
                 key={genre.name}
                 to={`/discover?genres=${encodeURIComponent(genre.name)}`}
-                className="group flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all duration-200"
+                className="group flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-emerald-400 hover:shadow-lg transition-all duration-200"
               >
-                <span className="text-xs font-extrabold text-dark-900 group-hover:text-indigo-400 transition-colors truncate">
+                <span className="text-xs font-extrabold text-dark-900 group-hover:text-emerald-400 transition-colors truncate">
                   {genre.name}
                 </span>
-                <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                   {genre.count}
                 </span>
               </Link>

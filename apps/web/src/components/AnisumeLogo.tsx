@@ -32,14 +32,14 @@ export default function AnisumeLogo({
           className="w-full h-full drop-shadow-md"
         >
           {/* Symmetrical Sun Disc in Background */}
-          <circle cx="16" cy="14" r="7.5" fill="#6366F1" fillOpacity="0.2" />
+          <circle cx="16" cy="14" r="7.5" fill="#10B981" fillOpacity="0.2" />
           <circle cx="16" cy="14" r="5" fill="#F4C95D" fillOpacity="0.9" />
 
           {/* Symmetrical Torii Gate Structure */}
           {/* Top curved main beam (Kasagi) */}
           <path
             d="M3 8.5C10 7 22 7 29 8.5"
-            stroke="#6366F1"
+            stroke="#10B981"
             strokeWidth="2.5"
             strokeLinecap="round"
           />
@@ -49,7 +49,7 @@ export default function AnisumeLogo({
             y1="12"
             x2="26"
             y2="12"
-            stroke="#6366F1"
+            stroke="#10B981"
             strokeWidth="2"
             strokeLinecap="round"
           />
@@ -78,7 +78,7 @@ export default function AnisumeLogo({
             y1="8.5"
             x2="16"
             y2="12"
-            stroke="#6366F1"
+            stroke="#10B981"
             strokeWidth="2"
           />
         </svg>
@@ -91,7 +91,7 @@ export default function AnisumeLogo({
             ANISUME
           </span>
           {showKanji && (
-            <span className="text-[10px] font-japanese font-black px-1.5 py-0.5 rounded bg-indigo-600/20 text-indigo-400 border border-indigo-500/40 leading-none">
+            <span className="text-[10px] font-japanese font-black px-1.5 py-0.5 rounded bg-emerald-600/20 text-emerald-400 border border-emerald-500/40 leading-none">
               兄夢
             </span>
           )}

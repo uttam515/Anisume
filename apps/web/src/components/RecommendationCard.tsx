@@ -129,7 +129,7 @@ export default function RecommendationCard({
   return (
     <div
       onClick={handleCardClick}
-      className={`group bg-dark-900 border border-dark-800 hover:border-indigo-500/50 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between cursor-pointer hover:shadow-indigo-500/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-in fade-in zoom-in-95 ${
+      className={`group bg-dark-900 border border-dark-800 hover:border-emerald-500/50 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between cursor-pointer hover:shadow-emerald-500/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-in fade-in zoom-in-95 ${
         isExiting ? 'scale-90 opacity-0 pointer-events-none' : 'scale-100 opacity-100'
       }`}
     >
@@ -161,8 +161,8 @@ export default function RecommendationCard({
 
           {/* Franchise Continuation Pill (if sequel) */}
           {item.franchiseInfo?.predecessorTitle && (
-            <div className="absolute bottom-2 left-2 right-2 px-2.5 py-1 rounded-xl bg-dark-950/90 backdrop-blur-md border border-indigo-500/40 text-[11px] text-white line-clamp-1 shadow-md">
-              <span className="text-indigo-400 font-bold mr-1">Next:</span>
+            <div className="absolute bottom-2 left-2 right-2 px-2.5 py-1 rounded-xl bg-dark-950/90 backdrop-blur-md border border-emerald-500/40 text-[11px] text-white line-clamp-1 shadow-md">
+              <span className="text-emerald-400 font-bold mr-1">Next:</span>
               <span>After {item.franchiseInfo.predecessorTitle}</span>
             </div>
           )}
@@ -170,7 +170,7 @@ export default function RecommendationCard({
 
         {/* Content Section - Zero synopsis clutter */}
         <div className="p-3.5 space-y-1.5">
-          <h3 className="block text-sm font-extrabold text-white group-hover:text-indigo-400 line-clamp-2 transition-colors leading-snug">
+          <h3 className="block text-sm font-extrabold text-white group-hover:text-emerald-400 line-clamp-2 transition-colors leading-snug">
             {displayTitle}
           </h3>
 
@@ -295,7 +295,7 @@ export default function RecommendationCard({
           >
             <div className="flex justify-between font-medium">
               <span className="text-slate-400">Genre Match:</span>
-              <span className="text-indigo-400 font-bold">{scoreBreakdown.genreScore}%</span>
+              <span className="text-emerald-400 font-bold">{scoreBreakdown.genreScore}%</span>
             </div>
             <div className="flex justify-between font-medium">
               <span className="text-slate-400">Theme Match:</span>
@@ -314,7 +314,7 @@ export default function RecommendationCard({
             {scoreBreakdown.negativePenalty !== undefined && scoreBreakdown.negativePenalty > 0 && (
               <div className="flex justify-between font-medium">
                 <span className="text-slate-400">Avoidance Penalty:</span>
-                <span className="text-indigo-400 font-bold">-{scoreBreakdown.negativePenalty}%</span>
+                <span className="text-emerald-400 font-bold">-{scoreBreakdown.negativePenalty}%</span>
               </div>
             )}
             <div className="flex justify-between font-medium pt-1 border-t border-dark-800">

@@ -16,7 +16,7 @@ export default function ShimmerButton({
 }: ShimmerButtonProps) {
   const variantStyles = {
     primary:
-      'bg-indigo-600 hover:bg-indigo-500 text-white shadow-xl shadow-indigo-600/30 border-indigo-500 font-bold',
+      'bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-600/30 border-emerald-500 font-bold',
     emerald:
       'bg-brand-emerald hover:bg-emerald-600 text-dark-950 font-black shadow-lg shadow-brand-emerald/30 border-transparent',
     sky:

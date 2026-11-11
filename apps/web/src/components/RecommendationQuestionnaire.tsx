@@ -183,7 +183,7 @@ export default function RecommendationQuestionnaire({
         <div className="p-6 border-b border-dark-800 bg-dark-950/60">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+              <div className="w-8 h-8 rounded-xl bg-emerald-600/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                 <Flame className="w-4 h-4" />
               </div>
               <div>

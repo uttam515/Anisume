@@ -148,7 +148,7 @@ export default function MyListPage() {
 
         <Link
           to="/discover"
-          className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md shadow-indigo-600/20 transition self-start sm:self-auto"
+          className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition self-start sm:self-auto"
         >
           <Compass className="w-4 h-4" />
           <span>Discover Anime</span>
@@ -175,7 +175,7 @@ export default function MyListPage() {
                   isActive
                     ? tabConfig
                       ? `${tabConfig.bg} ${tabConfig.color} border ${tabConfig.border}`
-                      : 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                      : 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
                     : 'bg-dark-900 border border-dark-800 text-slate-300 hover:text-white hover:bg-dark-850'
                 }`}
               >
@@ -201,11 +201,11 @@ export default function MyListPage() {
             onClick={() => updateParams({ tab: 'custom_lists' })}
             className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
               isCustomListsTab
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
                 : 'bg-dark-900 border border-dark-800 text-slate-300 hover:text-white hover:bg-dark-850'
             }`}
           >
-            <FolderPlus className={`w-3.5 h-3.5 ${isCustomListsTab ? 'text-white' : 'text-indigo-400'}`} />
+            <FolderPlus className={`w-3.5 h-3.5 ${isCustomListsTab ? 'text-white' : 'text-emerald-400'}`} />
             <span>Custom Collections</span>
           </button>
         </div>

@@ -24,8 +24,8 @@ export default function LibraryStats({ stats }: LibraryStatsProps) {
       label: 'Episodes Watched',
       value: stats.totalEpisodesWatched.toLocaleString(),
       icon: Tv,
-      color: 'text-indigo-400',
-      bg: 'bg-indigo-500/10',
+      color: 'text-emerald-400',
+      bg: 'bg-emerald-500/10',
     },
   ];
 

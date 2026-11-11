@@ -21,7 +21,7 @@ export default function AnimeCard({ anime, priority = false }: AnimeCardProps) {
   return (
     <Link
       to={`/anime/${anime.mal_id}`}
-      className="group relative flex flex-col bg-dark-900 rounded-2xl overflow-hidden border border-dark-800 hover:border-indigo-500/50 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 hover:-translate-y-1"
+      className="group relative flex flex-col bg-dark-900 rounded-2xl overflow-hidden border border-dark-800 hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 hover:-translate-y-1"
     >
       {/* Poster Image Container */}
       <div className="relative aspect-[2/3] w-full bg-dark-950 overflow-hidden">
@@ -67,7 +67,7 @@ export default function AnimeCard({ anime, priority = false }: AnimeCardProps) {
 
         {/* Subtle hover gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-          <span className="text-xs text-indigo-400 font-bold tracking-wide">
+          <span className="text-xs text-emerald-400 font-bold tracking-wide">
             View Details →
           </span>
         </div>
@@ -78,7 +78,7 @@ export default function AnimeCard({ anime, priority = false }: AnimeCardProps) {
         <div>
           <h3
             title={displayTitle}
-            className="text-xs font-bold text-slate-100 line-clamp-2 group-hover:text-indigo-400 transition-colors leading-tight"
+            className="text-xs font-bold text-slate-100 line-clamp-2 group-hover:text-emerald-400 transition-colors leading-tight"
           >
             {displayTitle}
           </h3>

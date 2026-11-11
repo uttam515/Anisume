@@ -165,10 +165,10 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
             onClick={() => setMobileFilterOpen(true)}
             className="lg:hidden flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-dark-900 border border-dark-800 text-slate-200 text-xs font-bold hover:bg-dark-850 transition-colors"
           >
-            <SlidersHorizontal className="w-3.5 h-3.5 text-indigo-400" />
+            <SlidersHorizontal className="w-3.5 h-3.5 text-emerald-400" />
             <span>Filters</span>
             {hasActiveFilters && (
-              <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
             )}
           </button>
 
@@ -178,7 +178,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
             <select
               value={sortParam}
               onChange={(e) => updateParams({ sort: e.target.value })}
-              className="bg-dark-900 border border-dark-800 rounded-xl px-3.5 py-2 text-xs text-white font-bold focus:outline-none focus:border-indigo-500 cursor-pointer"
+              className="bg-dark-900 border border-dark-800 rounded-xl px-3.5 py-2 text-xs text-white font-bold focus:outline-none focus:border-emerald-500 cursor-pointer"
             >
               <option value="popularity">Most Popular</option>
               <option value="highest_rated">Highest Rated</option>
@@ -196,13 +196,13 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
           <div className="bg-dark-900 border border-dark-800 rounded-3xl p-6 space-y-6 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto no-scrollbar shadow-xl">
             <div className="flex items-center justify-between pb-3.5 border-b border-dark-800">
               <div className="flex items-center space-x-2 text-sm font-black text-white">
-                <SlidersHorizontal className="w-4 h-4 text-indigo-400" />
+                <SlidersHorizontal className="w-4 h-4 text-emerald-400" />
                 <span>Filters</span>
               </div>
               {hasActiveFilters && (
                 <button
                   onClick={handleResetFilters}
-                  className="flex items-center space-x-1 text-[11px] font-bold text-indigo-400 hover:underline transition-colors"
+                  className="flex items-center space-x-1 text-[11px] font-bold text-emerald-400 hover:underline transition-colors"
                 >
                   <RotateCcw className="w-3 h-3" />
                   <span>Reset All</span>
@@ -219,7 +219,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
                     onClick={() => updateParams({ type: undefined })}
                     className={`py-2 text-xs font-bold rounded-lg transition-colors ${
                       typeParam === 'all'
-                        ? 'bg-indigo-600 text-white shadow-md'
+                        ? 'bg-emerald-600 text-white shadow-md'
                         : 'text-slate-400 hover:text-white'
                     }`}
                   >
@@ -229,7 +229,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
                     onClick={() => updateParams({ type: 'tv' })}
                     className={`py-2 text-xs font-bold rounded-lg transition-colors flex items-center justify-center space-x-1 ${
                       typeParam === 'tv'
-                        ? 'bg-indigo-600 text-white shadow-md'
+                        ? 'bg-emerald-600 text-white shadow-md'
                         : 'text-slate-400 hover:text-white'
                     }`}
                   >
@@ -240,7 +240,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
                     onClick={() => updateParams({ type: 'movie' })}
                     className={`py-2 text-xs font-bold rounded-lg transition-colors flex items-center justify-center space-x-1 ${
                       typeParam === 'movie'
-                        ? 'bg-indigo-600 text-white shadow-md'
+                        ? 'bg-emerald-600 text-white shadow-md'
                         : 'text-slate-400 hover:text-white'
                     }`}
                   >
@@ -281,7 +281,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
               <select
                 value={yearParam || ''}
                 onChange={(e) => updateParams({ year: e.target.value ? parseInt(e.target.value, 10) : undefined })}
-                className="w-full bg-dark-950 border border-dark-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 font-bold focus:outline-none focus:border-indigo-500"
+                className="w-full bg-dark-950 border border-dark-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 font-bold focus:outline-none focus:border-emerald-500"
               >
                 <option value="">All Broadcast Years</option>
                 {yearsOptions.map((y) => (
@@ -298,7 +298,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
               <select
                 value={statusParam}
                 onChange={(e) => updateParams({ status: e.target.value })}
-                className="w-full bg-dark-950 border border-dark-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 font-bold focus:outline-none focus:border-indigo-500"
+                className="w-full bg-dark-950 border border-dark-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 font-bold focus:outline-none focus:border-emerald-500"
               >
                 <option value="all">All Statuses</option>
                 <option value="Finished Airing">Finished Airing</option>
@@ -312,7 +312,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
               <div className="flex items-center justify-between text-xs">
                 <span className="font-black text-slate-300 uppercase tracking-wider">Genres & Themes</span>
                 {selectedGenres.length > 0 && (
-                  <span className="text-indigo-400 text-[11px] font-black">{selectedGenres.length} active</span>
+                  <span className="text-emerald-400 text-[11px] font-black">{selectedGenres.length} active</span>
                 )}
               </div>
               <div className="flex flex-wrap gap-1.5 max-h-60 overflow-y-auto pr-1">
@@ -324,7 +324,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
                       onClick={() => handleGenreToggle(g.name)}
                       className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition-all flex items-center space-x-1.5 ${
                         isSelected
-                          ? 'bg-indigo-600 text-white border-indigo-500 shadow-md shadow-indigo-600/25'
+                          ? 'bg-emerald-600 text-white border-emerald-500 shadow-md shadow-emerald-600/25'
                           : 'bg-dark-950 border-dark-800 text-slate-400 hover:text-white hover:border-slate-700'
                       }`}
                     >
@@ -368,7 +368,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
                       <button
                         onClick={() => updateParams({ type: undefined })}
                         className={`py-2 text-xs font-bold rounded-lg ${
-                          typeParam === 'all' ? 'bg-indigo-600 text-white' : 'text-slate-400'
+                          typeParam === 'all' ? 'bg-emerald-600 text-white' : 'text-slate-400'
                         }`}
                       >
                         All
@@ -376,7 +376,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
                       <button
                         onClick={() => updateParams({ type: 'tv' })}
                         className={`py-2 text-xs font-bold rounded-lg ${
-                          typeParam === 'tv' ? 'bg-indigo-600 text-white' : 'text-slate-400'
+                          typeParam === 'tv' ? 'bg-emerald-600 text-white' : 'text-slate-400'
                         }`}
                       >
                         TV
@@ -384,7 +384,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
                       <button
                         onClick={() => updateParams({ type: 'movie' })}
                         className={`py-2 text-xs font-bold rounded-lg ${
-                          typeParam === 'movie' ? 'bg-indigo-600 text-white' : 'text-slate-400'
+                          typeParam === 'movie' ? 'bg-emerald-600 text-white' : 'text-slate-400'
                         }`}
                       >
                         Movie
@@ -403,7 +403,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
                         onClick={() => handleGenreToggle(g.name)}
                         className={`px-3 py-1.5 rounded-xl text-xs font-bold border ${
                           selectedGenres.includes(g.name)
-                            ? 'bg-indigo-600 text-white border-indigo-500'
+                            ? 'bg-emerald-600 text-white border-emerald-500'
                             : 'bg-dark-950 border-dark-800 text-slate-400'
                         }`}
                       >
@@ -433,7 +433,7 @@ export default function DiscoverPage({ initialType }: DiscoverPageProps) {
               <div className="pt-6 border-t border-dark-800 space-y-2">
                 <button
                   onClick={() => setMobileFilterOpen(false)}
-                  className="w-full py-3 rounded-xl font-black text-xs bg-indigo-600 text-white shadow-md shadow-indigo-600/25"
+                  className="w-full py-3 rounded-xl font-black text-xs bg-emerald-600 text-white shadow-md shadow-emerald-600/25"
                 >
                   Apply Filters
                 </button>

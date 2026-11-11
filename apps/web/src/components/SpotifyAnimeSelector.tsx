@@ -443,14 +443,14 @@ export default function SpotifyAnimeSelector({
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.15 }}
-                          className="absolute inset-0 bg-indigo-600/60 backdrop-blur-[2px] flex items-center justify-center text-white"
+                          className="absolute inset-0 bg-emerald-600/60 backdrop-blur-[2px] flex items-center justify-center text-white"
                         >
                           <motion.div
                             initial={{ scale: 0, rotate: -25 }}
                             animate={{ scale: 1, rotate: 0 }}
                             exit={{ scale: 0, rotate: 25 }}
                             transition={{ type: 'spring', stiffness: 500, damping: 22 }}
-                            className="w-8 h-8 rounded-full bg-white text-indigo-600 flex items-center justify-center shadow-lg"
+                            className="w-8 h-8 rounded-full bg-white text-emerald-600 flex items-center justify-center shadow-lg"
                           >
                             <Check className="w-5 h-5 stroke-[3]" />
                           </motion.div>

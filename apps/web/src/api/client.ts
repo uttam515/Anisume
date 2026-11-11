@@ -1,4 +1,5 @@
 import type { Anime } from '@anisume/shared';
+import { API_BASE, apiRequest } from './config.js';
 
 export interface GenreItem {
   name: string;
@@ -42,18 +43,8 @@ export interface AnimeQueryParams {
   sort?: 'popularity' | 'highest_rated' | 'score' | 'newest' | 'oldest' | 'alphabetical';
 }
 
-const API_BASE = '/api';
-
 async function fetchJson<T>(url: string): Promise<T> {
-  const res = await fetch(url);
-  if (!res.ok) {
-    const errorText = await res.text().catch(() => '');
-    if ((!errorText || errorText === 'Internal Server Error') && (res.status === 500 || res.status === 502 || res.status === 504)) {
-      throw new Error('Connection error: Backend server is temporarily unreachable or restarting. Please try again.');
-    }
-    throw new Error(`API error ${res.status}: ${errorText || res.statusText}`);
-  }
-  return res.json() as Promise<T>;
+  return apiRequest<T>(url);
 }
 
 export const api = {

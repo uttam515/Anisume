@@ -6,59 +6,7 @@ import type {
   LibraryQueryParams,
   LibraryListResponse,
 } from '@anisume/shared';
-
-const API_BASE = '/api';
-
-function getCsrfToken(): string {
-  if (typeof document === 'undefined') return '';
-  const match = document.cookie.match(new RegExp('(^|;\\s*)anisume_csrf=([^;]*)'));
-  return match && match[2] ? decodeURIComponent(match[2]) : '';
-}
-
-async function request<T>(url: string, options: RequestInit = {}): Promise<T> {
-  const method = (options.method || 'GET').toUpperCase();
-  const headers = new Headers(options.headers || {});
-
-  if (!headers.has('Content-Type') && options.body && typeof options.body === 'string') {
-    headers.set('Content-Type', 'application/json');
-  }
-
-  if (!['GET', 'HEAD', 'OPTIONS'].includes(method)) {
-    const csrfToken = getCsrfToken();
-    if (csrfToken) {
-      headers.set('X-CSRF-Token', csrfToken);
-    }
-  }
-
-  const res = await fetch(url, {
-    ...options,
-    headers,
-    credentials: 'include',
-  });
-
-  let data: any = null;
-  const contentType = res.headers.get('content-type');
-  if (contentType && contentType.includes('application/json')) {
-    data = await res.json().catch(() => null);
-  }
-
-  if (!res.ok) {
-    let errorMsg = data?.error || data?.message;
-    if (!errorMsg) {
-      if (res.status === 500 || res.status === 502 || res.status === 504) {
-        errorMsg = 'Cannot reach backend server. Please verify the API server is running on port 4000.';
-      } else {
-        errorMsg = `API error ${res.status}: ${res.statusText}`;
-      }
-    }
-    const error = new Error(errorMsg);
-    (error as any).code = data?.code;
-    (error as any).status = res.status;
-    throw error;
-  }
-
-  return data as T;
-}
+import { API_BASE, apiRequest as request } from './config.js';
 
 export const libraryApi = {
   /**

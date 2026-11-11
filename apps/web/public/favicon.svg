@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <style>
+    @media (prefers-color-scheme: light) {
+      .torii-pillar { stroke: #14191D; }
+      .torii-beam { stroke: #E50914; }
+      .sun-disc { fill: #F4C95D; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .torii-pillar { stroke: #FAF3E0; }
+      .torii-beam { stroke: #FF3344; }
+      .sun-disc { fill: #F4C95D; }
+    }
+  </style>
+
+  <!-- Symmetrical Sun Disc in Background -->
+  <circle cx="16" cy="14" r="7.5" fill="#E50914" fill-opacity="0.25" />
+  <circle cx="16" cy="14" r="5" fill="#F4C95D" class="sun-disc" />
+
+  <!-- Symmetrical Torii Gate Structure -->
+  <!-- Top curved main beam (Kasagi) -->
+  <path
+    d="M3 8.5C10 7 22 7 29 8.5"
+    stroke="#E50914"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    class="torii-beam"
+  />
+
+  <!-- Secondary tie beam (Nuki) -->
+  <line
+    x1="6"
+    y1="12"
+    x2="26"
+    y2="12"
+    stroke="#E50914"
+    stroke-width="2"
+    stroke-linecap="round"
+    class="torii-beam"
+  />
+
+  <!-- Left and Right symmetrical pillars (Older design: white/ivory #FAF3E0 for dark mode) -->
+  <line
+    x1="9.5"
+    y1="8.5"
+    x2="8.5"
+    y2="27"
+    stroke="#FAF3E0"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    class="torii-pillar"
+  />
+  <line
+    x1="22.5"
+    y1="8.5"
+    x2="23.5"
+    y2="27"
+    stroke="#FAF3E0"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    class="torii-pillar"
+  />
+
+  <!-- Center symmetrical strut (Gakuzuka) -->
+  <line
+    x1="16"
+    y1="8.5"
+    x2="16"
+    y2="12"
+    stroke="#E50914"
+    stroke-width="2"
+    class="torii-beam"
+  />
+</svg>
+

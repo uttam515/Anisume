@@ -1,0 +1,27 @@
+{
+  "name": "anisume",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n \"api,web\" -c \"blue,green\" \"pnpm --filter @anisume/api dev\" \"pnpm --filter @anisume/web dev\"",
+    "dev:api": "pnpm --filter @anisume/api dev",
+    "dev:web": "pnpm --filter @anisume/web dev",
+    "build": "pnpm --filter @anisume/shared build && pnpm --filter @anisume/api build && pnpm --filter @anisume/web build",
+    "typecheck": "pnpm --recursive run typecheck",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.14",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7",
+    "eslint": "^8.57.1",
+    "mongoose": "^8.9.5",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

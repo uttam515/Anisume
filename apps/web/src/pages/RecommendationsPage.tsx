@@ -202,10 +202,6 @@ export default function RecommendationsPage() {
       {/* Page Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-dark-800 pb-6">
         <div>
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-red/15 text-brand-red border border-brand-red/30 text-xs font-black uppercase tracking-wider mb-2">
-            <Flame className="w-3.5 h-3.5 text-brand-yellow" />
-            <span>推薦 • Sensory Taste Engine</span>
-          </div>
           <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight flex items-center space-x-3">
             <span>Personalized For You</span>
           </h1>
@@ -217,7 +213,7 @@ export default function RecommendationsPage() {
                 <strong className="text-slate-200">{prefsSummary.themesCount || profile?.topThemes.length || 0} themes</strong>
                 {(prefsSummary.negativeGenresCount > 0 || (profile?.negativeGenres && profile.negativeGenres.length > 0)) && (
                   <span>
-                    , with <strong className="text-brand-red">{prefsSummary.negativeGenresCount || profile?.negativeGenres.length} avoided</strong>
+                    , with <strong className="text-rose-400">{prefsSummary.negativeGenresCount || profile?.negativeGenres.length} avoided</strong>
                   </span>
                 )}
                 . React to evolve in real-time.
@@ -246,13 +242,13 @@ export default function RecommendationsPage() {
             className="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-dark-900 hover:bg-dark-850 border border-dark-800 text-slate-300 hover:text-white flex items-center space-x-2 transition cursor-pointer"
             title="Refresh recommendation calculations"
           >
-            <RotateCw className={`w-3.5 h-3.5 ${refreshing ? 'animate-spin text-brand-red' : ''}`} />
+            <RotateCw className={`w-3.5 h-3.5 ${refreshing ? 'animate-spin text-rose-400' : ''}`} />
             <span>Recalculate</span>
           </button>
 
           <Link
             to="/questionnaire"
-            className="px-4 py-2.5 rounded-xl text-xs font-black bg-brand-red hover:bg-red-700 text-white shadow-md shadow-brand-red/20 flex items-center space-x-2 transition cursor-pointer"
+            className="px-4 py-2.5 rounded-xl text-xs font-black bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/20 flex items-center space-x-2 transition cursor-pointer"
           >
             <span>Retake Quiz</span>
           </Link>
@@ -368,7 +364,7 @@ export default function RecommendationsPage() {
 
           <Link
             to="/questionnaire"
-            className="px-5 py-2.5 rounded-xl bg-brand-red hover:bg-red-700 text-white text-xs font-black transition shadow-md shadow-brand-red/20 shrink-0 self-start sm:self-auto"
+            className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-black transition shadow-md shadow-indigo-600/20 shrink-0 self-start sm:self-auto"
           >
             Start Questionnaire
           </Link>
@@ -387,7 +383,7 @@ export default function RecommendationsPage() {
               onClick={() => updateCategory(cat.id)}
               className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-black whitespace-nowrap transition-all cursor-pointer ${
                 isActive
-                  ? 'bg-brand-red text-white shadow-md shadow-brand-red/25 ring-2 ring-brand-red/40'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/25 ring-2 ring-indigo-500/40'
                   : 'bg-dark-900 border border-dark-800 text-slate-300 hover:text-white hover:bg-dark-850'
               }`}
             >

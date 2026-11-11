@@ -55,14 +55,14 @@ export default function ResetPasswordPage() {
     return (
       <div className="min-h-[80vh] flex items-center justify-center px-4 py-16 relative overflow-hidden">
         <div className="max-w-md w-full bg-[#14191D]/95 backdrop-blur-xl border border-[#252E37] rounded-3xl p-8 text-center shadow-2xl">
-          <AlertCircle className="w-12 h-12 text-brand-red mx-auto mb-4" />
+          <AlertCircle className="w-12 h-12 text-rose-400 mx-auto mb-4" />
           <h2 className="text-xl font-bold text-white mb-2">Invalid Reset Link</h2>
           <p className="text-xs text-slate-400 mb-6 leading-relaxed font-medium">
             No reset token found in this link. Please request a new password reset email.
           </p>
           <Link
             to="/forgot-password"
-            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-brand-red hover:bg-red-700 text-white text-xs font-black shadow-lg shadow-brand-red/25 transition"
+            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-lg shadow-indigo-600/25 transition"
           >
             <span>Request New Reset Link</span>
           </Link>
@@ -86,13 +86,13 @@ export default function ResetPasswordPage() {
 
       <div className="relative z-10 max-w-md w-full bg-[#14191D]/95 backdrop-blur-xl border border-[#252E37] rounded-3xl p-8 sm:p-10 shadow-2xl overflow-hidden">
         {/* Top Vermilion Accent Bar */}
-        <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-brand-red via-brand-yellow to-brand-orange rounded-full opacity-80" />
+        <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-indigo-500 via-sky-400 to-emerald-400 rounded-full opacity-80" />
 
         <div className="text-center mb-7 flex flex-col items-center">
           <Link to="/" className="mb-4 inline-block hover:scale-105 transition-transform">
             <img src="/anisume-logo.png" alt="Anisume" className="h-9 w-auto object-contain" />
           </Link>
-          <div className="w-12 h-12 rounded-2xl bg-brand-red/15 border border-brand-red/30 text-brand-red flex items-center justify-center mx-auto mb-3 shadow-md">
+          <div className="w-12 h-12 rounded-2xl bg-indigo-600/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mx-auto mb-3 shadow-md">
             <Lock className="w-6 h-6" />
           </div>
           <h1 className="text-2xl font-black text-white tracking-tight">Set New Password</h1>
@@ -102,8 +102,8 @@ export default function ResetPasswordPage() {
         </div>
 
         {error && (
-          <div className="mb-6 p-3.5 rounded-xl bg-brand-red/10 border border-brand-red/30 text-rose-300 text-xs flex items-start space-x-2.5">
-            <AlertCircle className="w-4 h-4 shrink-0 text-brand-red mt-0.5" />
+          <div className="mb-6 p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs flex items-start space-x-2.5">
+            <AlertCircle className="w-4 h-4 shrink-0 text-rose-400 mt-0.5" />
             <span>{error}</span>
           </div>
         )}
@@ -120,7 +120,7 @@ export default function ResetPasswordPage() {
 
             <Link
               to="/login"
-              className="w-full inline-flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-gradient-to-r from-brand-red to-red-600 hover:from-red-600 hover:to-brand-red text-white text-xs font-black shadow-lg shadow-brand-red/25 transition cursor-pointer"
+              className="w-full inline-flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-lg shadow-indigo-600/25 transition cursor-pointer"
             >
               <span>Sign In with New Password</span>
               <ArrowRight className="w-4 h-4" />
@@ -137,7 +137,7 @@ export default function ResetPasswordPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red/30 transition-all font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 transition-all font-medium"
               />
               <div className="flex items-center space-x-3 mt-2 text-[10px] text-slate-400">
                 <span className={`flex items-center space-x-1 ${hasMinLength ? 'text-brand-emerald font-bold' : ''}`}>
@@ -166,8 +166,8 @@ export default function ResetPasswordPage() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className={`w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border text-slate-100 text-sm focus:outline-none transition-all font-medium ${
                   confirmPassword.length > 0 && !passwordsMatch
-                    ? 'border-brand-red'
-                    : 'border-[#252E37] focus:border-brand-red focus:ring-1 focus:ring-brand-red/30'
+                    ? 'border-rose-500'
+                    : 'border-[#252E37] focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30'
                 }`}
               />
             </div>
@@ -175,7 +175,7 @@ export default function ResetPasswordPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full mt-2 inline-flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-gradient-to-r from-brand-red to-red-600 hover:from-red-600 hover:to-brand-red text-white text-sm font-black shadow-lg shadow-brand-red/30 hover:shadow-brand-red/50 transition-all duration-200 cursor-pointer disabled:opacity-50 active:scale-[0.99]"
+              className="w-full mt-2 inline-flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold shadow-lg shadow-indigo-600/25 transition-all duration-200 cursor-pointer disabled:opacity-50 active:scale-[0.99]"
             >
               {loading ? (
                 <div className="w-4 h-4 rounded-full border-2 border-white border-t-transparent animate-spin" />

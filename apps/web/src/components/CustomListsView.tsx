@@ -241,7 +241,7 @@ export default function CustomListsView() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-dark-900 border border-dark-800 p-5 rounded-2xl">
         <div>
           <h2 className="text-base font-bold text-white flex items-center space-x-2">
-            <Layers className="w-4 h-4 text-brand-red" />
+            <Layers className="w-4 h-4 text-indigo-400" />
             <span>Personal Custom Lists</span>
           </h2>
           <p className="text-xs text-slate-400 mt-0.5">

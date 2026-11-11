@@ -8,9 +8,9 @@ export const WATCH_STATUS_CONFIG: Record<
 > = {
   watching: {
     label: 'Watching',
-    color: 'text-brand-red',
-    bg: 'bg-brand-red/10',
-    border: 'border-brand-red/30',
+    color: 'text-indigo-400',
+    bg: 'bg-indigo-500/10',
+    border: 'border-indigo-500/30',
     icon: Play,
   },
   completed: {
@@ -92,7 +92,7 @@ export default function WatchStatusSelector({
         className={`${isFullWidth ? 'w-full' : ''} inline-flex items-center justify-between rounded-xl font-semibold border transition-all ${sizeClasses} ${
           config
             ? `${config.bg} ${config.color} ${config.border} hover:opacity-90`
-            : 'bg-brand-red hover:bg-brand-red/90 text-white border-transparent shadow-md shadow-brand-red/20'
+            : 'bg-indigo-600 hover:bg-indigo-500 text-white border-transparent shadow-md shadow-indigo-600/20'
         } disabled:opacity-50`}
       >
         <div className="flex items-center space-x-1.5 truncate">

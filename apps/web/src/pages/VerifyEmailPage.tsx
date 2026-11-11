@@ -65,7 +65,7 @@ export default function VerifyEmailPage() {
 
         {loading ? (
           <div className="py-12 space-y-4">
-            <div className="w-12 h-12 rounded-full border-3 border-brand-red border-t-transparent animate-spin mx-auto" />
+            <div className="w-12 h-12 rounded-full border-3 border-indigo-500 border-t-transparent animate-spin mx-auto" />
             <h2 className="text-lg font-bold text-white">Verifying Email Address...</h2>
             <p className="text-xs text-slate-400">Please wait while we confirm your account token.</p>
           </div>
@@ -82,7 +82,7 @@ export default function VerifyEmailPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 to="/profile"
-                className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-xl bg-brand-red hover:bg-red-700 text-white text-xs font-black shadow-md shadow-brand-red/25 transition"
+                className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md shadow-indigo-600/25 transition"
               >
                 <span>View Profile</span>
                 <ArrowRight className="w-4 h-4" />
@@ -106,7 +106,7 @@ export default function VerifyEmailPage() {
             {/* Resend verification box */}
             <div className="bg-dark-950 border border-dark-800 rounded-2xl p-5 text-left mb-6">
               <div className="text-xs font-bold text-slate-200 mb-1 flex items-center space-x-1.5">
-                <Mail className="w-3.5 h-3.5 text-brand-red" />
+                <Mail className="w-3.5 h-3.5 text-indigo-400" />
                 <span>Request a new verification link</span>
               </div>
               <p className="text-[11px] text-slate-400 mb-3">
@@ -125,12 +125,12 @@ export default function VerifyEmailPage() {
                     value={resendEmail}
                     onChange={(e) => setResendEmail(e.target.value)}
                     placeholder="you@domain.com"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-dark-900 border border-dark-800 text-xs text-slate-100 focus:outline-none focus:border-brand-red font-medium"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-dark-900 border border-dark-800 text-xs text-slate-100 focus:outline-none focus:border-indigo-500 font-medium"
                   />
                   <button
                     type="submit"
                     disabled={resending}
-                    className="w-full py-2.5 rounded-xl bg-brand-red hover:bg-red-700 text-white text-xs font-black shadow-md shadow-brand-red/20 transition disabled:opacity-50 cursor-pointer"
+                    className="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md shadow-indigo-600/20 transition disabled:opacity-50 cursor-pointer"
                   >
                     {resending ? 'Sending...' : 'Send New Link'}
                   </button>
@@ -140,7 +140,7 @@ export default function VerifyEmailPage() {
 
             <Link
               to="/login"
-              className="text-xs font-bold text-brand-red hover:underline transition"
+              className="text-xs font-bold text-indigo-400 hover:underline transition"
             >
               Back to Sign In
             </Link>

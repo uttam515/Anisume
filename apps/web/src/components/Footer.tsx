@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="text-xs font-black uppercase tracking-wider text-white flex items-center space-x-1.5">
               <span>Navigation</span>
-              <span className="font-japanese text-[10px] text-brand-red">案内</span>
+              <span className="font-japanese text-[10px] text-indigo-400">案内</span>
             </h4>
             <ul className="space-y-2 text-xs font-medium">
               <li>
@@ -101,7 +101,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-dark-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
           <div className="flex items-center space-x-1">
             <span>© {new Date().getFullYear()} Anisume. Made with</span>
-            <Heart className="w-3.5 h-3.5 fill-brand-red text-brand-red" />
+            <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500" />
             <span>for the global anime community.</span>
           </div>
 

@@ -64,7 +64,7 @@ export default function LibraryAnimeCard({ item, onUpdate, onRemove }: LibraryAn
   };
 
   return (
-    <div className="bg-[#14191D] border border-[#252E37] hover:border-brand-red/50 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col sm:flex-row group">
+    <div className="bg-[#14191D] border border-[#252E37] hover:border-indigo-500/50 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col sm:flex-row group">
       {/* Anime Poster Thumbnail */}
       <Link
         to={`/anime/${item.mal_id}`}
@@ -92,7 +92,7 @@ export default function LibraryAnimeCard({ item, onUpdate, onRemove }: LibraryAn
           <div className="flex items-start justify-between gap-2.5">
             <Link
               to={`/anime/${item.mal_id}`}
-              className="text-sm sm:text-base font-extrabold text-[#FAF3E0] hover:text-brand-red line-clamp-1 transition-colors leading-snug"
+              className="text-sm sm:text-base font-extrabold text-[#FAF3E0] hover:text-indigo-400 line-clamp-1 transition-colors leading-snug"
               title={displayTitle}
             >
               {displayTitle}

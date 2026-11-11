@@ -64,7 +64,7 @@ export default function RegisterPage() {
       </div>
 
       {/* Ambient Lighting Orbs */}
-      <div className="absolute top-1/3 left-8 w-96 h-96 bg-brand-red/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 left-8 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-8 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Unified Full-Size Cinematic Auth Card */}
@@ -115,8 +115,8 @@ export default function RegisterPage() {
             </div>
 
             {error && (
-              <div className="mb-5 p-3.5 rounded-xl bg-brand-red/10 border border-brand-red/30 text-rose-300 text-xs flex items-start space-x-2.5">
-                <AlertCircle className="w-4 h-4 shrink-0 text-brand-red mt-0.5" />
+              <div className="mb-5 p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs flex items-start space-x-2.5">
+                <AlertCircle className="w-4 h-4 shrink-0 text-rose-400 mt-0.5" />
                 <span>{error}</span>
               </div>
             )}
@@ -131,7 +131,7 @@ export default function RegisterPage() {
                   required
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red/30 transition-all font-medium"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 transition-all font-medium"
                 />
               </div>
 
@@ -144,7 +144,7 @@ export default function RegisterPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red/30 transition-all font-medium"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 transition-all font-medium"
                 />
               </div>
 
@@ -155,7 +155,7 @@ export default function RegisterPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red/30 transition-all font-medium"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 transition-all font-medium"
                 />
 
                 {/* Password Criteria */}
@@ -186,7 +186,7 @@ export default function RegisterPage() {
                   required
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red/30 transition-all font-medium"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#0D100F] border border-[#252E37] text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 transition-all font-medium"
                 />
                 {confirmPassword.length > 0 && (
                   <div className="mt-1 text-[10px]">
@@ -196,7 +196,7 @@ export default function RegisterPage() {
                         <span>Passwords match</span>
                       </span>
                     ) : (
-                      <span className="text-brand-red">Passwords do not match</span>
+                      <span className="text-rose-400">Passwords do not match</span>
                     )}
                   </div>
                 )}
@@ -206,7 +206,7 @@ export default function RegisterPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-3 inline-flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-gradient-to-r from-brand-red to-red-600 hover:from-red-600 hover:to-brand-red text-white text-sm font-black shadow-lg shadow-brand-red/30 hover:shadow-brand-red/50 transition-all duration-200 cursor-pointer disabled:opacity-50 active:scale-[0.99]"
+                className="w-full mt-3 inline-flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold shadow-lg shadow-indigo-600/25 transition-all duration-200 cursor-pointer disabled:opacity-50 active:scale-[0.99]"
               >
                 <UserPlus className="w-4 h-4" />
                 <span>{loading ? 'Creating Account...' : 'Create Account'}</span>
@@ -217,7 +217,7 @@ export default function RegisterPage() {
           {/* Bottom Switch Link */}
           <div className="mt-6 pt-5 border-t border-[#252E37] text-center text-xs text-slate-400">
             Already have an account?{' '}
-            <Link to="/login" className="font-black text-brand-red hover:underline ml-1">
+            <Link to="/login" className="font-black text-indigo-400 hover:underline ml-1">
               Sign in
             </Link>
           </div>

@@ -105,7 +105,7 @@ export default function EpisodeProgressControl({
                 value={inputVal}
                 onChange={(e) => setInputVal(e.target.value)}
                 onBlur={handleDirectSubmit}
-                className="w-16 px-1.5 py-1 text-center text-xs font-bold rounded-lg bg-[#101313] border border-brand-red text-white focus:outline-none"
+                className="w-16 px-1.5 py-1 text-center text-xs font-bold rounded-lg bg-[#101313] border border-indigo-500 text-white focus:outline-none"
               />
             </form>
           ) : (

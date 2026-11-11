@@ -120,39 +120,13 @@ export default function ToriiSakuraHero() {
 
       {/* Main Hero Container */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 py-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        {/* Left Column (7 cols): Typography, Hanko Stamp, Pitch & Actions */}
+        {/* Left Column (7 cols): Typography, Pitch & Actions */}
         <div className="lg:col-span-7 space-y-6 text-left">
-          {/* Japanese Torii & Hanko Badge */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#1C2329]/90 border border-brand-red/50 backdrop-blur-md shadow-lg shadow-brand-red/10 animate-in fade-in slide-in-from-top-4 duration-500">
-            {/* Authentic Torii Gate Emblem with Black Side Bars */}
-            <div className="w-5 h-5 shrink-0 flex items-center justify-center">
-              <svg
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-full drop-shadow-sm"
-              >
-                <circle cx="16" cy="14" r="7.5" fill="#E50914" fillOpacity="0.25" />
-                <circle cx="16" cy="14" r="5" fill="#F4C95D" fillOpacity="0.95" />
-                <path d="M3 8.5C10 7 22 7 29 8.5" stroke="#E50914" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="6" y1="12" x2="26" y2="12" stroke="#E50914" strokeWidth="2" strokeLinecap="round" />
-                <line x1="9.5" y1="8.5" x2="8.5" y2="27" stroke="#000000" strokeWidth="2.2" strokeLinecap="round" />
-                <line x1="22.5" y1="8.5" x2="23.5" y2="27" stroke="#000000" strokeWidth="2.2" strokeLinecap="round" />
-                <line x1="16" y1="8.5" x2="16" y2="12" stroke="#E50914" strokeWidth="2" />
-              </svg>
-            </div>
-            <span className="text-xs font-black tracking-wide text-[#FAF3E0] uppercase flex items-center gap-1.5">
-              <span>新しいアニメの世界へ</span>
-              <span className="text-brand-yellow">•</span>
-              <span className="text-brand-orange font-extrabold">Next-Gen Discovery</span>
-            </span>
-          </div>
-
-          {/* Primary Display Title - Vibrant, Crystal Clear Contrast */}
+          {/* Primary Display Title */}
           <div className="space-y-1">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]">
               <span className="text-[#FAF3E0] block drop-shadow-sm">DISCOVER</span>
-              <span className="text-brand-red font-black block drop-shadow-md py-0.5">
+              <span className="text-indigo-400 font-black block drop-shadow-md py-0.5">
                 ANIME THAT
               </span>
               <span className="text-brand-yellow block drop-shadow-sm">
@@ -164,13 +138,13 @@ export default function ToriiSakuraHero() {
             </p>
           </div>
 
-          {/* Action Row - Clear icons without glowing three-stars */}
+          {/* Action Row */}
           <div className="flex flex-wrap items-center gap-3.5 pt-2">
             <Link to="/questionnaire">
               <ShimmerButton
                 variant="primary"
                 size="lg"
-                className="bg-[#E50914] hover:bg-[#CC0812] text-white border-[#E50914] shadow-xl shadow-brand-red/40 font-black"
+                className="bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500 shadow-xl shadow-indigo-600/30 font-bold"
               >
                 <Flame className="w-5 h-5 mr-2 text-brand-yellow" />
                 Find My Anime Match
@@ -237,7 +211,7 @@ export default function ToriiSakuraHero() {
             </div>
 
             {/* Decorative Floating Kanji Badge */}
-            <div className="absolute -top-3 -left-3 z-30 px-3 py-2 rounded-xl bg-brand-cream text-brand-ink font-japanese font-black text-xs shadow-2xl border border-brand-red/30 rotate-6">
+            <div className="absolute -top-3 -left-3 z-30 px-3 py-2 rounded-xl bg-brand-cream text-brand-ink font-japanese font-black text-xs shadow-2xl border border-[#2E3842] rotate-6">
               新時代へ
             </div>
           </div>

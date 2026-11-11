@@ -47,7 +47,7 @@ export function BentoCard({
   }[rowSpan];
 
   const badgeColorClasses = {
-    red: 'bg-brand-red text-white',
+    red: 'bg-indigo-600 text-white',
     emerald: 'bg-brand-emerald text-dark-950 font-black',
     sky: 'bg-brand-sky text-dark-950 font-black',
     pink: 'bg-brand-pink text-white font-black',

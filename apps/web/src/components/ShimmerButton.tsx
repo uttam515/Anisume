@@ -16,13 +16,13 @@ export default function ShimmerButton({
 }: ShimmerButtonProps) {
   const variantStyles = {
     primary:
-      'bg-brand-red hover:bg-[#cc0812] text-white shadow-xl shadow-brand-red/35 border-brand-red font-black',
+      'bg-indigo-600 hover:bg-indigo-500 text-white shadow-xl shadow-indigo-600/30 border-indigo-500 font-bold',
     emerald:
       'bg-brand-emerald hover:bg-emerald-600 text-dark-950 font-black shadow-lg shadow-brand-emerald/30 border-transparent',
     sky:
       'bg-brand-sky hover:bg-sky-400 text-dark-950 font-black shadow-lg shadow-brand-sky/30 border-transparent',
     outline:
-      'bg-[#1C2329]/90 hover:bg-[#252E37] text-white border-[#2E3842] hover:border-brand-red/60 shadow-md',
+      'bg-[#1C2329]/90 hover:bg-[#252E37] text-white border-[#2E3842] hover:border-slate-500 shadow-md',
   }[variant];
 
   const sizeStyles = {

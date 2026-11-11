@@ -116,10 +116,6 @@ export default function SearchPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-10">
       {/* Search Header and Input */}
       <div className="max-w-3xl mx-auto text-center space-y-5">
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-red/15 text-brand-red border border-brand-red/30 text-xs font-black uppercase tracking-wider">
-          <Flame className="w-3.5 h-3.5" />
-          <span>検索 • Deep Universe Search</span>
-        </div>
         <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
           Find Any Anime in Seconds
         </h1>
@@ -136,7 +132,7 @@ export default function SearchPage() {
             placeholder="Search anime title, studio, or genre..."
             value={inputVal}
             onChange={(e) => handleInputChange(e.target.value)}
-            className="w-full bg-dark-900 border border-dark-800 rounded-2xl pl-12 pr-12 py-4 text-sm sm:text-base text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 shadow-2xl transition-all font-medium"
+            className="w-full bg-dark-900 border border-dark-800 rounded-2xl pl-12 pr-12 py-4 text-sm sm:text-base text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 shadow-2xl transition-all font-medium"
           />
           {inputVal && (
             <button
@@ -155,7 +151,7 @@ export default function SearchPage() {
             onClick={() => handleTypeChange('all')}
             className={`px-4 py-2 rounded-xl text-xs font-black transition-colors ${
               typeParam === 'all'
-                ? 'bg-brand-red text-white shadow-md shadow-brand-red/20'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
                 : 'bg-dark-900 text-slate-300 hover:text-white border border-dark-800'
             }`}
           >
@@ -165,7 +161,7 @@ export default function SearchPage() {
             onClick={() => handleTypeChange('tv')}
             className={`flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-black transition-colors ${
               typeParam === 'tv'
-                ? 'bg-brand-red text-white shadow-md shadow-brand-red/20'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
                 : 'bg-dark-900 text-slate-300 hover:text-white border border-dark-800'
             }`}
           >
@@ -176,7 +172,7 @@ export default function SearchPage() {
             onClick={() => handleTypeChange('movie')}
             className={`flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-black transition-colors ${
               typeParam === 'movie'
-                ? 'bg-brand-red text-white shadow-md shadow-brand-red/20'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
                 : 'bg-dark-900 text-slate-300 hover:text-white border border-dark-800'
             }`}
           >
@@ -214,7 +210,7 @@ export default function SearchPage() {
             'Popular Series & Films'
           )}
         </span>
-        <span className="font-bold text-brand-red">{totalCount.toLocaleString()} anime found</span>
+        <span className="font-bold text-indigo-400">{totalCount.toLocaleString()} anime found</span>
       </div>
 
       {/* Results View */}

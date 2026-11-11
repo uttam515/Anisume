@@ -7,7 +7,7 @@ interface SectionHeaderProps {
   icon?: LucideIcon;
   viewAllLink?: string;
   kanji?: string;
-  accentColor?: 'red' | 'emerald' | 'sky' | 'pink' | 'yellow' | 'orange';
+  accentColor?: 'indigo' | 'emerald' | 'sky' | 'pink' | 'yellow' | 'orange' | 'red';
 }
 
 export default function SectionHeader({
@@ -16,10 +16,11 @@ export default function SectionHeader({
   icon: Icon,
   viewAllLink,
   kanji,
-  accentColor = 'red',
+  accentColor = 'indigo',
 }: SectionHeaderProps) {
   const iconColorClasses = {
-    red: 'bg-brand-red/15 text-brand-red border-brand-red/30',
+    indigo: 'bg-indigo-600/15 text-indigo-400 border-indigo-500/30',
+    red: 'bg-indigo-600/15 text-indigo-400 border-indigo-500/30',
     emerald: 'bg-brand-emerald/15 text-brand-emerald border-brand-emerald/30',
     sky: 'bg-brand-sky/15 text-brand-sky border-brand-sky/30',
     pink: 'bg-brand-pink/15 text-brand-pink border-brand-pink/30',
@@ -28,7 +29,8 @@ export default function SectionHeader({
   }[accentColor];
 
   const kanjiColorClasses = {
-    red: 'text-brand-red',
+    indigo: 'text-indigo-400',
+    red: 'text-indigo-400',
     emerald: 'text-brand-emerald',
     sky: 'text-brand-sky',
     pink: 'text-brand-pink',
@@ -69,7 +71,7 @@ export default function SectionHeader({
           className="group inline-flex items-center space-x-1 text-xs font-bold text-slate-300 hover:text-white transition-colors shrink-0 px-3 py-1.5 rounded-lg hover:bg-dark-850"
         >
           <span>Explore All</span>
-          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 text-brand-red transition-transform" />
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 text-indigo-400 transition-transform" />
         </Link>
       )}
     </div>

@@ -218,7 +218,7 @@ export default function AddToListModal({
         <div className="p-4 bg-dark-950/60 border-t border-dark-800">
           <form onSubmit={handleCreateNewList} className="space-y-2">
             <p className="text-xs font-semibold text-slate-400 flex items-center space-x-1.5">
-              <Plus className="w-3.5 h-3.5 text-brand-red" />
+              <Plus className="w-3.5 h-3.5 text-indigo-400" />
               <span>Create New Personal List</span>
             </p>
             <div className="flex space-x-2">

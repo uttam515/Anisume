@@ -1,164 +1,111 @@
-# Anisume — Anime Discovery Platform
+# Anisume (アニメの宇宙)
 
-Anisume is an anime discovery and recommendation platform built with React, Vite, Tailwind CSS, Express, TypeScript, and MongoDB.
+> A modern, full-stack anime discovery and recommendation platform blending deep sensory matching with a traditional Japanese-inspired cinematic dark aesthetic.
 
-Combining the rich browsing experience of AniList with the cinematic presentation of modern streaming platforms, Anisume provides a dark-first discovery experience across 12,900+ anime series and movies.
-
----
-
-## Features (Phase 1: Anime Discovery Website)
-
-- **Cinematic Dark-First UI**: Deep charcoal canvas (`#08090D`), violet/brand accents (`#8B5CF6`), smooth hover transitions, and zero-layout-shift skeleton loaders.
-- **Global Responsive Navigation**: Sticky navbar with active indicators, live search modal shortcut, and mobile drawer.
-- **Cinematic Homepage**:
-  - Rotating Hero Carousel featuring top-rated anime with backdrop art, scores, synopsis, and direct navigation.
-  - Trending TV Anime section sorted by MAL popularity and member metrics.
-  - Interactive "Browse by Genre" collection cards with real-time catalog counts.
-  - Top Rated Anime showcase (score >= 8.0).
-  - Popular Anime Movies carousel.
-  - Recently Released series grid.
-- **Advanced Discover Engine (`/discover`)**:
-  - Live filtering by format (TV Series vs Movies).
-  - Multi-genre selection with logical conjunction (e.g. Action + Fantasy).
-  - Minimum rating threshold slider/buttons (7.0+, 8.0+, 8.5+).
-  - Release year filter.
-  - Airing status filter (Finished Airing, Currently Airing, Upcoming).
-  - Multi-criterion sorting (Popularity, Highest Rated, Newest, Title A-Z).
-  - Responsive pagination and seamless URL search param synchronization.
-- **Dedicated Movies Page (`/movies`)**: Direct pre-filtered discovery portal for anime movies.
-- **Instant Search (`/search`)**:
-  - Searches across English titles, Romaji canonical titles, Japanese titles, and synonyms.
-  - Debounced input (350ms) with keyboard shortcuts and type filters.
-- **Anime Detail View (`/anime/:mal_id`)**:
-  - Full-width backdrop banner, high-res poster, rating badges, MAL score rank & popularity.
-  - Complete metadata sidebar (episodes, duration, season/year, status, rating, broadcast).
-  - Clickable studio badges and genre/theme tags linked directly to filtered discover queries.
-  - Embedded YouTube trailer video player.
-  - Related anime recommendations / sequel resolution.
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18-61dafb.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-6-646cff.svg)](https://vitejs.dev/)
+[![Express](https://img.shields.io/badge/Express-4-green.svg)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose%208-47A248.svg)](https://www.mongodb.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8.svg)](https://tailwindcss.com/)
 
 ---
 
-## Monorepo Architecture
+## ✨ Highlights
+
+- **🧠 Taste-Matching Recommendation Engine**: 4-step interactive questionnaire analyzing sensory preferences, pacing, mood, and themes to recommend curated anime.
+- **📚 Library & Episode Tracker**: Personal library management with watch statuses (*Watching*, *Completed*, *Plan to Watch*, *On Hold*, *Dropped*), episode steppers, and 10-star rating system.
+- **🔍 12,900+ Title Catalog**: Instant search across English, Romaji, and Japanese titles with advanced filters (genre combinations, score thresholds, format, airing year).
+- **🌸 Japanese Dark Aesthetics**: Sumi-ink canvas (`#0D100F`), Torii gate emblem, 60fps cherry blossom petal canvas, and responsive cinematic artwork cards.
+- **🔐 Secure Authentication**: JWT session management, email verification tokens, secure password reset, and user profile management.
+- **📑 Custom Lists**: Create, curate, and share custom public or private anime collections.
+
+---
+
+## 🏗️ Architecture
 
 ```
 anisume/
 ├── apps/
-│   ├── api/                   # Express backend API & Mongoose models
-│   │   ├── src/
-│   │   │   ├── config/        # Mongoose database connection manager
-│   │   │   ├── models/        # Anime Mongoose schema, compound & text indexes
-│   │   │   ├── routes/        # Catalog, discovery, detail, and health endpoints
-│   │   │   ├── app.ts         # Express application configuration
-│   │   │   └── index.ts       # Server entry point (Port 4000)
-│   │   └── package.json
-│   └── web/                   # React + Vite + Tailwind CSS frontend
-│       ├── src/
-│       │   ├── api/           # Typed API client
-│       │   ├── components/    # Reusable UI (Navbar, Footer, AnimeCard, Hero, Skeletons)
-│       │   ├── pages/         # HomePage, DiscoverPage, SearchPage, AnimeDetailPage
-│       │   ├── App.tsx        # Router configuration & layout
-│       │   └── index.css      # Dark theme & custom scrollbars
-│       ├── vite.config.ts     # Dev server (Port 3000) with /api proxy
-│       └── package.json
+│   ├── api/             # Express.js REST API with Mongoose 8
+│   │   └── src/         # Auth, library, recommendations, anime routes & models
+│   └── web/             # React 18 + Vite frontend with Tailwind CSS
+│       └── src/         # Pages, components, hooks, and API client
 ├── packages/
-│   └── shared/                # Shared TypeScript types, schemas, and enums
-│       ├── src/
-│       │   ├── types/anime.ts # Normalized Anime domain types
-│       │   └── index.ts
-│       └── package.json
-├── scripts/                   # Data ingestion, enrichment, and verification suites
-│   ├── import-anime.ts        # Fault-tolerant Jikan API ingestion engine
-│   ├── enrich-anime.ts        # Detail enrichment pipeline for top titles
-│   ├── verify-phase1.ts       # Automated 16-point test verification suite
-│   └── verify-db-connection.ts
-├── .env.example               # Environment variables template
-├── package.json               # Root scripts and workspace dev tooling
-├── pnpm-workspace.yaml        # Workspace configuration
-└── tsconfig.base.json         # Base TypeScript strict config
+│   └── shared/          # Shared TypeScript models, enums, and schemas
+└── posters/             # High-resolution artwork assets
 ```
 
 ---
 
-## Technology Stack
+## 🚀 Quickstart
 
-- **Frontend**: React 18, React Router v7, Vite, TypeScript, Tailwind CSS, Lucide Icons
-- **Backend**: Node.js (>=20), Express.js, TypeScript, Mongoose 8
-- **Database**: MongoDB Atlas (`anisume` database)
-- **Tooling**: pnpm workspaces, ESLint, Prettier, tsx
+### Prerequisites
+- **Node.js** >= 20.x
+- **pnpm** >= 9.x
+- **MongoDB Atlas** or local MongoDB instance
 
----
-
-## Getting Started
-
-### 1. Prerequisites
-
-- Node.js >= 20.x
-- pnpm >= 9.x
-- MongoDB Atlas cluster URI
-
-### 2. Environment Setup
-
-Create `.env` in the project root:
-
-```bash
-cp .env.example .env
-```
-
-Ensure your `.env` contains:
-```env
-MONGODB_URI=mongodb+srv://Animatch:<PASSWORD>@cluster0.fucarun.mongodb.net/anisume?retryWrites=true&w=majority
-PORT=4000
-NODE_ENV=development
-```
-
-### 3. Install Dependencies
-
+### 1. Install Dependencies
 ```bash
 pnpm install
 ```
 
-### 4. Running the Development Servers
-
-Run both the API and Web applications concurrently:
-
+### 2. Configure Environment
+Copy `.env.example` to `.env`:
 ```bash
-pnpm dev
+cp .env.example .env
 ```
 
-Or run them individually:
-- **Backend API**: `pnpm dev:api` (available at `http://localhost:4000`)
-- **Frontend App**: `pnpm dev:web` (available at `http://localhost:3000`)
+Ensure `.env` contains:
+```env
+MONGODB_URI=mongodb+srv://<USER>:<PASSWORD>@<CLUSTER>.mongodb.net/anisume?retryWrites=true&w=majority
+JWT_SECRET=your_super_secret_jwt_key
+PORT=4000
+NODE_ENV=development
+```
+
+### 3. Run Development Servers
+```bash
+# Start both API (port 4000) and Web (port 3000) concurrently
+pnpm dev
+
+# Or run separately
+pnpm dev:api
+pnpm dev:web
+```
 
 ---
 
-## API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/api/health` | Health check and database connection status |
-| `GET` | `/api/anime/featured` | Top-rated anime with backdrop art for hero slider |
-| `GET` | `/api/anime/trending` | Top TV anime sorted by popularity/members |
-| `GET` | `/api/anime/top-rated` | Highest-rated anime (score >= 8.0) |
-| `GET` | `/api/anime/recent` | Recent releases sorted by release year |
-| `GET` | `/api/anime/movies` | Popular anime movies |
-| `GET` | `/api/anime/genres` | Aggregated list of genres with title counts |
-| `GET` | `/api/anime` | Paginated search & filtering (`q`, `type`, `genres`, `minScore`, `year`, `status`, `sort`, `page`, `limit`) |
-| `GET` | `/api/anime/:mal_id` | Complete anime detail record with resolved related anime |
-
----
-
-## Running Verification & Quality Checks
+## 🛠️ Verification & Build
 
 ```bash
-# Run TypeScript check across all packages
+# Typecheck across all workspace packages
 pnpm typecheck
 
-# Run ESLint across monorepo
+# Lint codebase
 pnpm lint
 
-# Build production bundles
+# Production build
 pnpm build
-
-# Run automated Phase 1 end-to-end verification suite
-npx tsx scripts/verify-phase1.ts
 ```
+
+---
+
+## 📡 Core API Routes
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET` | `/api/health` | Service health & database connectivity |
+| `GET` | `/api/anime` | Paginated search & multi-genre filtering |
+| `GET` | `/api/anime/:mal_id` | Anime detail view & related titles |
+| `POST` | `/api/recommendations/match` | Sensory questionnaire recommendation engine |
+| `POST` | `/api/auth/register` | User signup with email validation |
+| `POST` | `/api/auth/login` | Secure session authentication |
+| `GET` / `PUT` | `/api/library` | User personal watch list & episode tracking |
+| `GET` / `POST` | `/api/custom-lists` | Custom user-curated anime collections |
+
+---
+
+## 📄 License
+
+MIT
